@@ -26,6 +26,7 @@ module.exports = function (environment) {
   if (environment === "development") {
     ENV.api = {
       host: "http://localhost:4000",
+      namespace: "/api",
     };
 
     ENV["ember-cli-mirage"] = {
@@ -36,6 +37,7 @@ module.exports = function (environment) {
   if (environment === "test") {
     ENV.api = {
       host: "http://localhost:4200",
+      namespace: "/api",
     };
 
     ENV["ember-cli-mirage"] = {
