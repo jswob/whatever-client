@@ -1,0 +1,18 @@
+{{#if @isOpened}}
+<button type="button" data-test-pop-up-menu-bg class="pop-up-menu-bg"
+    {{on "click" (stop-propagation this.toggleAction)}}>
+</button>
+
+<div ...attributes data-test-pop-up-menu-wrapper class="pop-up-menu"
+    {{on "click" (stop-propagation this.toggleAction)}}>
+    <div class="headline-wrapper">
+        <button type="button" class="exit-icon material-icons" {{on "click" @toggleAction}}>clear</button>
+        <h1>
+            {{@label}}
+        </h1>
+    </div>
+    <div class="yield-box">
+        {{yield}}
+    </div>
+</div>
+{{/if}}
