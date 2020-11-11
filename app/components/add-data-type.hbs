@@ -1,0 +1,12 @@
+{{#if this.searchAttributes.notSelectedDataTypes.length}}
+<button data-test-add-data-type-button class="add-data-type-button" type="button" class="material-icons"
+    {{on "click" this.toggleOpen}}>add</button>
+{{/if}}
+
+<PopUpMenu data-test-add-data-type-menu @isOpened={{this.isOpen}} @toggleAction={{this.toggleOpen}}
+    @label="Dodaj typ danych">
+    {{#each this.searchAttributes.notSelectedDataTypes as |type|}}
+    <button data-test-add-data-option data-test-add-data-option-id="{{type.id}}" class="default-button" type="button"
+        {{on "click" (fn this.addDataType type)}}>{{type.name}}</button>
+    {{/each}}
+</PopUpMenu>
