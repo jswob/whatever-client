@@ -1,0 +1,83 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.animated-text {
+  margin: 0 auto;
+  font-family: "Goldman", cursive;
+
+  @apply block;
+
+  .text-copy {
+    fill: none;
+    stroke: purple;
+    stroke-dasharray: 6% 29%;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 1.2s infinite linear;
+  }
+
+  .text-copy:nth-child(1) {
+    stroke: orchid;
+    animation-delay: -1;
+  }
+
+  .text-copy:nth-child(2) {
+    stroke: indigo;
+    animation-delay: -2s;
+  }
+
+  .text-copy:nth-child(3) {
+    stroke: magenta;
+    animation-delay: -3s;
+  }
+
+  .text-copy:nth-child(4) {
+    stroke: darkmagenta;
+    animation-delay: -4s;
+  }
+
+  .text-copy:nth-child(5) {
+    stroke: mediumpurple;
+    animation-delay: -5s;
+  }
+
+  @keyframes stroke-offset {
+    100% {
+      stroke-dashoffset: -35%;
+    }
+  }
+}
+
+@layer utilities {
+  @responsive {
+    .animated-text-whatever-lg {
+      height: 57px;
+      width: 415px;
+      font-size: 4rem;
+    }
+
+    .animated-text-whatever-md {
+      height: 43px;
+      width: 311px;
+      font-size: 3rem;
+    }
+
+    .animated-text-whatever-sm {
+      height: 35px;
+      width: 260px;
+      font-size: 2.5rem;
+    }
+
+    .sw-sm {
+      stroke-width: 2.7px;
+    }
+
+    .sw-md {
+      stroke-width: 3px;
+    }
+
+    .sw-lg {
+      stroke-width: 4.5px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<svg ...attributes class="animated-text">
+    <symbol id="{{this.randomId}}">
+        <text text-anchor="middle" x="50%" y="80%">{{yield}}</text>
+    </symbol>
+
+    <g class="g-ants">
+        {{#each this.strokes}}
+        <use xlink:href="#{{this.randomId}}" class="text-copy sw-sm sm:sw-md md:sw-lg"></use>
+        {{/each}}
+    </g>
+</svg>
