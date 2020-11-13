@@ -1,0 +1,61 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.pop-up-menu {
+  max-width: 360px;
+  margin-top: -10rem;
+
+  @apply fixed p-3 left-0 right-0 mx-auto rounded-lg text-center cursor-default w-9/12 z-20 bg-gray-400;
+
+  .headline-wrapper {
+    @apply flex flex-no-wrap flex-row-reverse w-full text-2xl text-right;
+
+    h1 {
+      @apply text-center w-10/12 tracking-wide font-bold text-purple-700;
+    }
+
+    .exit-icon {
+      transition: 0.5s;
+
+      @apply w-1/12 text-xl font-semibold text-gray-600;
+    }
+
+    .exit-icon:hover {
+      @apply text-gray-700;
+    }
+
+    .exit-icon:active {
+      @apply text-purple-700;
+    }
+  }
+
+  .yield-box {
+    @apply py-4 px-2;
+
+    .default-button {
+      font-family: "Goldman", cursive;
+      transition: 0.5s;
+
+      @apply w-10/12 text-sm text-gray-800 font-semibold tracking-wider bg-gray-200 mt-2 py-1 uppercase shadow-md outline-none;
+    }
+
+    .default-button:hover {
+      box-shadow: purple;
+
+      @apply bg-gray-100 text-gray-700;
+    }
+
+    .default-button:active {
+      @apply bg-purple-400 text-gray-900;
+    }
+  }
+}
+
+.pop-up-menu-bg {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.3;
+
+  @apply block fixed top-0 left-0 w-full h-full z-10 cursor-pointer bg-black;
+}

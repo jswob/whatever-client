@@ -2,7 +2,7 @@
 <button type="button" data-test-pop-up-menu-bg class="pop-up-menu-bg" {{on "click" (stop-propagation @toggleAction)}}>
 </button>
 
-<div ...attributes data-test-pop-up-menu-wrapper class="pop-up-menu"
+<div ...attributes data-test-pop-up-menu-wrapper class="pop-up-menu sm:w-6/12 md:5-12 lg:w-4/12 xl:w-3/12"
     {{on "click" (stop-propagation this.stopPropagationAction)}}>
     <div class="headline-wrapper">
         <button data-test-pop-up-menu-exit-icon type="button" class="exit-icon material-icons"
