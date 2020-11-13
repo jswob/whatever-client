@@ -1,0 +1,20 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.add-data-type-button {
+  font-size: 1.1rem !important;
+  transition: 0.5s;
+  width: 32px;
+  height: 32px;
+
+  @apply bg-gray-700 text-gray-100 rounded-full mb-1;
+}
+
+.add-data-type-button:hover {
+  @apply bg-gray-600;
+}
+
+.add-data-type-button:active {
+  @apply bg-purple-700 text-gray-100;
+}
