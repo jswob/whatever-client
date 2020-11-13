@@ -1,0 +1,32 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.data-type-element {
+  font-family: "Goldman", cursive;
+  font-size: 0.7rem;
+
+  @apply bg-purple-300 text-yellow-400 flex flex-row
+          px-2 py-1 rounded-full ml-2 mb-2;
+
+  .clear-button {
+    transition: 0.5s;
+    padding: 0.2rem;
+    font-size: 0.5rem;
+
+    @apply text-white bg-purple-600 shadow-lg
+            rounded-full text-xs my-auto;
+  }
+
+  .clear-button:hover {
+    @apply bg-purple-700 text-gray-100;
+  }
+
+  .clear-button:active {
+    @apply bg-purple-800 text-gray-100;
+  }
+
+  .content {
+    @apply h-full p-1 uppercase text-gray-700;
+  }
+}
