@@ -2,7 +2,21 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import "./components.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background: url("/assets/images/background/background.jpg") no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 button:active {
   @apply outline-none;
@@ -12,81 +26,52 @@ button:focus {
   @apply outline-none;
 }
 
-#search-main {
-  @apply w-8/12 m-auto pt-8 text-center;
+.search-main {
+  @apply w-11/12 m-auto pt-8 text-center;
 
-  h1 {
-    @apply text-4xl font-semibold text-center;
+  .main-title {
+    color: #ff73e8;
 
-    span {
-      @apply font-extrabold;
-    }
+    @apply font-semibold text-center;
   }
 
   #browser-input {
-    @apply w-11/12 m-auto rounded-full my-6 border-black border-2 outline-none text-xl px-4 font-medium;
+    font-family: "Lato", sans-serif;
+    -webkit-transition: 1s; /* Safari */
+    transition: 1s;
+
+    @apply w-11/12 m-auto rounded-full my-6 text-gray-200 border-purple-400 px-4 py-2 border-2 outline-none bg-gray-100 bg-opacity-0;
   }
-}
 
-.pop-up-menu {
-  @apply fixed left-0 right-0 mt-32 p-3 rounded-lg text-center mx-auto cursor-default w-2/5 z-20 bg-gray-400;
+  #browser-input:hover {
+    box-shadow: 0 0 5pt 1pt #be11c4;
 
-  .headline-wrapper {
-    @apply flex flex-no-wrap flex-row-reverse w-full text-4xl text-right;
-
-    h1 {
-      font-family: "Kaushan Script", cursive;
-
-      @apply text-center w-10/12 tracking-wide font-medium text-purple-700;
-    }
-
-    .exit-icon {
-      @apply w-1/12 text-3xl font-semibold text-gray-600;
-    }
-
-    .exit-icon:hover {
-      @apply text-gray-700;
-    }
-
-    .exit-icon:active {
-      @apply text-gray-800;
-    }
+    @apply text-purple-400;
   }
-  .yield-box {
-    @apply py-4 px-2;
 
-    .default-button {
-      @apply w-10/12 text-xl font-semibold tracking-wider bg-gray-300 mt-4 py-1 shadow-md outline-none;
-    }
+  #browser-input:focus {
+    box-shadow: 0 0 5pt 1pt #be11c4;
 
-    .default-button:hover {
-      box-shadow: purple;
+    @apply text-purple-400;
+  }
 
-      @apply bg-gray-100;
-    }
+  #data-types-manager {
+    @apply text-yellow-500 w-10/12 mx-auto text-left;
 
-    .default-button:active {
-      @apply bg-purple-400;
+    #data-types-list {
+      @apply flex flex-row-reverse flex-wrap mt-2;
+
+      .yield-box {
+        @apply ml-2;
+
+        .limit-box {
+          @apply inline-block;
+
+          input {
+            @apply bg-gray-100 bg-opacity-0 inline-block w-20 p-1 text-center;
+          }
+        }
+      }
     }
   }
-}
-
-.pop-up-menu-bg {
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.3;
-
-  @apply block fixed top-0 left-0 w-full h-full z-10 cursor-pointer bg-black;
-}
-
-.add-data-type-button {
-  @apply bg-gray-600 text-gray-100 rounded-full p-2 shadow-md;
-}
-
-.add-data-type-button:hover {
-  @apply bg-gray-500 text-gray-100;
-}
-
-.add-data-type-button:active {
-  @apply bg-gray-200 text-gray-700;
 }
