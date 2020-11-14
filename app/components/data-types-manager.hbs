@@ -1,0 +1,17 @@
+<div id="data-types-manager" data-test-data-types-manager>
+    <h2>Bases:</h2>
+
+    <div id="data-types-list" data-test-data-types-list>
+        <div class="yield-box">
+            {{yield}}
+        </div>
+
+        {{#each this.searchAttributes.selectedDataTypes as |type|}}
+        <DataTypeElement @type={{type}} />
+        {{/each}}
+
+        {{#if this.searchAttributes.areNotAllDataTypesSelected}}
+        <AddDataType />
+        {{/if}}
+    </div>
+</div>

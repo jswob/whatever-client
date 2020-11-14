@@ -1,10 +1,10 @@
-<div ...attributes class="data-type-element">
+<div ...attributes data-test-data-type-element class="data-type-element">
     <span class="content">
         {{@type.name}}
     </span>
     {{#if this.searchAttributes.isOneDataTypeSelected}}
     {{else}}
-    <button type="button" class="clear-button material-icons"
+    <button type="button" data-test-clear-button class="clear-button material-icons"
         {{on "click" (fn this.searchAttributes.removeDataType @type)}}>clear</button>
     {{/if}}
 </div>
