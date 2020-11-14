@@ -1,0 +1,23 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+#data-types-manager {
+  @apply text-yellow-500 w-10/12 mx-auto text-left;
+
+  #data-types-list {
+    @apply flex flex-row-reverse flex-wrap mt-2;
+
+    .yield-box {
+      @apply ml-2;
+
+      .limit-box {
+        @apply inline-block;
+
+        input {
+          @apply bg-gray-100 bg-opacity-0 inline-block w-20 p-1 text-center;
+        }
+      }
+    }
+  }
+}
