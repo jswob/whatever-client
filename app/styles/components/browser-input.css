@@ -1,0 +1,44 @@
+#browser-input {
+  font-family: "Lato", sans-serif;
+  -webkit-transition: 1s; /* Safari */
+  transition: 1s;
+
+  @apply w-11/12 m-auto rounded-full my-6 text-gray-200 border-purple-400 px-4 py-2 border-2 outline-none bg-gray-100 bg-opacity-0 text-left flex flex-row flex-no-wrap;
+
+  input {
+    @apply bg-white bg-opacity-0 w-11/12;
+  }
+
+  input:focus {
+    @apply outline-none;
+  }
+
+  .search-icon {
+    transition: 0.3s;
+    display: none;
+
+    @apply w-1/12 text-white text-right;
+  }
+
+  .search-icon:hover {
+    @apply text-pink-400;
+  }
+
+  .search-icon:active {
+    transition: 0s;
+
+    @apply font-extrabold;
+  }
+
+  .search-icon.display {
+    display: inline-block;
+  }
+}
+
+#browser-input:hover {
+  box-shadow: 0 0 5pt 1pt #be11c4;
+}
+
+#browser-input:focus-within {
+  box-shadow: 0 0 5pt 1pt #be11c4;
+}
