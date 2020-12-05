@@ -1,0 +1,6 @@
+<div ...attributes data-test-wrapper id="browser-input" class="text-sm sm:text-base sm:px-6 lg:text-lg">
+    <Input data-test-input class="bg-opacity-0 bg-white" placeholder="Search" @value={{this.query}}
+        @enter={{fn @action this.query}} />
+    <button data-test-search-icon type="button" class="search-icon {{if this.query.length "display"}} material-icons"
+        {{on "click" (fn @action this.query)}}>search</button>
+</div>
